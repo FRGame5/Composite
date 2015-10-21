@@ -1,5 +1,5 @@
 
-public class Entier {
+public class Entier extends Component{
 	private int entier;
 
 	public Entier(int entier) {

@@ -1,21 +1,17 @@
 import java.util.ArrayList;
 
-public class ExpressionMoins {
-	private ArrayList<Entier> soustraction;
+public class ExpressionMoins extends Expression{
 
 	public ExpressionMoins() {
-		soustraction = new ArrayList<Entier>();
+		super();
 	}
-
-	public void add(Entier e) {
-		soustraction.add(e);
-	}
-
+	
+	
 	public int evaluate() {
-		int result = soustraction.get(0).evaluate();
-		if (soustraction.size() > 1) {
-			for (int i = 1; i < soustraction.size(); i++) {
-				result -= soustraction.get(i).evaluate();
+		int result = super.getEntier().get(0).evaluate();
+		if (super.getEntier().size() > 1) {
+			for (int i = 1; i < super.getEntier().size(); i++) {
+				result -= super.getEntier().get(i).evaluate();
 			}
 		}
 		return result;

@@ -1,17 +1,17 @@
 public class ClientComposite {
 
 	public static void main(String[] args) {
-		ExpressionArithmetique complete;
+		Expression complete;
 		complete = new ExpressionPlus();
 		complete.add(new Entier(2));
-		ExpressionArithmetique milieu = new ExpressionDiv();
+		Expression milieu = new ExpressionDiv();
 		complete.add(milieu);
 		complete.add(new Entier(7));
-		ExpressionArithmetique droitediv = new ExpressionMult();
+		Expression droitediv = new ExpressionMult();
 		milieu.add(droitediv);
 		milieu.add(new Entier(6));
 		droitediv.add(new Entier(3));
-		ExpressionArithmetique soustraction = new ExpressionMoins();
+		Expression soustraction = new ExpressionMoins();
 		droitediv.add(soustraction);
 		droitediv.add(new Entier(6));
 		soustraction.add(new Entier(5));

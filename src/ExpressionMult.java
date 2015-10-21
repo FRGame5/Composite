@@ -1,24 +1,19 @@
 import java.util.ArrayList;
 
 
-public class ExpressionMult {
-	private ArrayList<Entier> multiplication;
+public class ExpressionMult extends Expression{
 
 	public ExpressionMult() {
-		multiplication = new ArrayList<Entier>();
+		super();
 	}
 	
-	public void add(Entier e)
-	{
-		multiplication.add(e);
-	}
-	
+
 	public int evaluate()
 	{
-		int result = multiplication.get(0).evaluate();
-		if (multiplication.size() > 1) {
-			for (int i = 1; i < multiplication.size(); i++) {
-				result *= multiplication.get(i).evaluate();
+		int result = super.getEntier().get(0).evaluate();
+		if (super.getEntier().size() > 1) {
+			for (int i = 1; i < super.getEntier().size(); i++) {
+				result *= super.getEntier().get(i).evaluate();
 			}
 		}
 		return result;
